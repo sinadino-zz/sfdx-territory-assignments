@@ -100,19 +100,21 @@ Create a permission set and assign pre-authorized users for this connected app.
 
 
 ### Test the JWT Auth Flow
-
+```
 $export CONSUMER_KEY=<connected app consumer key>
 $export JWT_KEY_FILE=<your server.key path>
 $export HUB_USERNAME=<your Dev Hub username>
-
+```
 Then run:
+```
 $sfdx force:auth:jwt:grant --clientid ${CONSUMER_KEY} --username ${HUB_USERNAME}  --jwtkeyfile ${JWT_KEY_FILE} --setdefaultdevhubusername
-
+```
 
 
 
 ###  Encrypt Your Secrets
-    For Travis CI to successfully execute the JWT bearer flow on your behalf, it requires access to the server.key so it can sign the OAuth request. To perform this step securely, encrypt the server.key so that only Travis CI can decrypt it, and then add it to your project.
+
+For Travis CI to successfully execute the JWT bearer flow on your behalf, it requires access to the server.key so it can sign the OAuth request. To perform this step securely, encrypt the server.key so that only Travis CI can decrypt it, and then add it to your project.
 
 
 
@@ -125,7 +127,6 @@ $sfdx force:auth:jwt:grant --clientid ${CONSUMER_KEY} --username ${HUB_USERNAME}
 ```
 ```
  Copy your server.key from the certificates directory to the assets folder.
-
 ```
 ```
  Log in to Travis CI with your GitHub credentials:
@@ -136,40 +137,40 @@ $sfdx force:auth:jwt:grant --clientid ${CONSUMER_KEY} --username ${HUB_USERNAME}
 ```
 
 Using the Travis CI CLI, run the following commands:
+```
 $travis env set CONSUMERKEY <connected app consumer key>
+```
+```
 $travis env set USERNAME <your Dev Hub username>
+```
 
 
 
 
-## Done
+## That's it! 
 
 You are ready to try pushing your changes to your github repo then go to Travis and wait for testing results.
 
 
-## references
+## References
 
 * [SFDC DX Tools](https://github.com/amphro/salesforcedx-tools) - The Salesforce DX tools 
 * [Trailhead](https://trailhead.salesforce.com/en/modules/sfdx_travis_ci/units/sfdx_travis_ci_setup) - Travis CI Trailhead
 *  [Travis](https://github.com/travis-ci/travis.rb#installation) - Installing Travis
 *  [Travis Site](https://travis-ci.org/) - Travis Website
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Cristiano Sinadino** - *Initial work* - [PurpleBooth](https://github.com/sinadino)
+* **Cristiano Sinadino**  - [github](https://github.com/sinadino)
 
 
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* This is a starting point for our CI processes
+* The yml can be customizes and tailored to your specific project needs.
+

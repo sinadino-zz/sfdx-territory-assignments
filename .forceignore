@@ -3,3 +3,5 @@
 #
 
 package.xml
+.DS_Store
+.forceignore
