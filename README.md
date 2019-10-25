@@ -1,6 +1,6 @@
 # Install DX Travis CI in 6 Steps 
 
-Installing travis ci and necessary steps to run ci jobs. This assumes you have a github account and your dx project github repository is connected to Travis already. After you go through these 6 steps, Travis CI will be invoked every time you push changes to your github repo. 
+Installing travis ci and necessary steps to run ci jobs. This assumes you have a github account and your dx project github repository is connected to Travis already. After you go through these 6 steps, Travis CI will be invoked every time you push changes to your github repo. Bla Bla
 
 ## Getting Started
 
